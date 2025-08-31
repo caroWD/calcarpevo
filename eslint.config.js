@@ -4,6 +4,9 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { globalIgnores } from 'eslint/config'
+import tsParser from '@typescript-eslint/parser'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import tsStandard from 'ts-standard'
 
 export default tseslint.config([
   globalIgnores(['dist']),
@@ -12,12 +15,15 @@ export default tseslint.config([
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
+      tsStandard.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
     ],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parser: tsParser,
     },
   },
+  eslintPluginPrettierRecommended,
 ])
