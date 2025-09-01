@@ -1,10 +1,10 @@
 import Main from '@/components/organisms/Main'
-import FiguresTypeLayout from '@/layouts/FiguresTypeLayout'
+import Layout from '@/layouts/Layout'
 import illustrationDark from '@/assets/two-young-people-studying-math-dark.svg'
 
 const Home = () => {
   return (
-    <FiguresTypeLayout>
+    <Layout>
       <Main>
         <section className="grow flex flex-col items-center justify-center gap-5">
           <hgroup className="flex flex-col gap-2 text-center">
@@ -22,7 +22,7 @@ const Home = () => {
           </p>
         </section>
       </Main>
-    </FiguresTypeLayout>
+    </Layout>
   )
 }
 
