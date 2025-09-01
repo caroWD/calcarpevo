@@ -2,51 +2,51 @@ import type { IconsNames } from '@/models/types'
 import { icons } from '../../utils/iconsUtil'
 
 type Props = {
-  name: IconsNames
+  nameIcon: IconsNames
   size: 5 | 6
 }
 
-const Icon = ({ name, size }: Props) => {
+const Icon = ({ nameIcon, size }: Props) => {
   const iconSize = size === 5 ? 'size-5' : 'size-6'
 
   return (
     <img
       src={
-        name === 'arrow back'
+        nameIcon === 'arrow back'
           ? icons.arrowBack
-          : name === 'circle'
+          : nameIcon === 'circle'
             ? icons.circle
-            : name === 'close'
+            : nameIcon === 'close'
               ? icons.close
-              : name === 'cone'
+              : nameIcon === 'cone'
                 ? icons.cone
-                : name === 'cube'
+                : nameIcon === 'cube'
                   ? icons.cube
-                  : name === 'cylinder'
+                  : nameIcon === 'cylinder'
                     ? icons.cylinder
-                    : name === 'dark mode'
+                    : nameIcon === 'dark mode'
                       ? icons.darkMode
-                      : name === 'diamond'
+                      : nameIcon === 'diamond'
                         ? icons.diamond
-                        : name === 'flat figure'
+                        : nameIcon === 'flat figure'
                           ? icons.flatFifure
-                          : name === 'light mode'
+                          : nameIcon === 'light mode'
                             ? icons.lightMode
-                            : name === 'more vert'
+                            : nameIcon === 'more vert'
                               ? icons.moreVert
-                              : name === 'parallelogram'
+                              : nameIcon === 'parallelogram'
                                 ? icons.parallelogram
-                                : name === 'polygon'
+                                : nameIcon === 'polygon'
                                   ? icons.polygon
-                                  : name === 'rectangle'
+                                  : nameIcon === 'rectangle'
                                     ? icons.rectangle
-                                    : name === 'solid figure'
+                                    : nameIcon === 'solid figure'
                                       ? icons.solidFigure
-                                      : name === 'sphere'
+                                      : nameIcon === 'sphere'
                                         ? icons.sphere
-                                        : name === 'square'
+                                        : nameIcon === 'square'
                                           ? icons.square
-                                          : name === 'trapeze'
+                                          : nameIcon === 'trapeze'
                                             ? icons.trapeze
                                             : icons.triangle
       }
