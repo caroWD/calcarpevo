@@ -1,5 +1,5 @@
 import type { IconsNames } from '@/models/types'
-import { icons } from '../../utils/iconsUtil'
+import { icons } from '../../utils/assetsUtil'
 
 type Props = {
   nameIcon: IconsNames

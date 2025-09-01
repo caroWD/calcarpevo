@@ -18,6 +18,9 @@ import sphere from '@/assets/sphere-icon.svg'
 import square from '@/assets/square-icon.svg'
 import trapeze from '@/assets/trapeze-icon.svg'
 import triangle from '@/assets/triangle-icon.svg'
+import logoLight from '@/assets/calcarpevo-logo-light.svg'
+import logoDark from '@/assets/calcarpevo-logo-dark.svg'
+import type { FigureOptions } from '@/models/types'
 
 export const icons = {
   arrowBack,
@@ -41,3 +44,16 @@ export const icons = {
   trapeze,
   triangle,
 }
+
+export const logos = { logoLight, logoDark }
+
+export const flatFigureOptions: FigureOptions[] = [
+  { id: 1, name: 'Cuadrado', link: 'cuadrado', icon: 'square' },
+  { id: 2, name: 'Rectángulo', link: 'rectangulo', icon: 'rectangle' },
+  { id: 3, name: 'Triángulo', link: 'triangulo', icon: 'triangle' },
+  { id: 4, name: 'Rombo', link: 'rombo', icon: 'diamond' },
+  { id: 5, name: 'Paralelogramo', link: 'paralelogramo', icon: 'parallelogram' },
+  { id: 6, name: 'Trapecio', link: 'trapecio', icon: 'trapeze' },
+  { id: 7, name: 'Polígono', link: 'poligono', icon: 'polygon' },
+  { id: 8, name: 'Círculo', link: 'circulo', icon: 'circle' },
+]

@@ -1,4 +1,4 @@
-import { logos } from '@/utils/logoUtil'
+import { logos } from '@/utils/assetsUtil'
 
 type Props = {
   mode: 'light' | 'dark'

@@ -20,3 +20,10 @@ export type IconsNames =
   | 'triangle'
 
 export type ThemeContextType = [string, () => void]
+
+export type FigureOptions = {
+  id: number
+  name: string
+  link: string
+  icon: IconsNames
+}
