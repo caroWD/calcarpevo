@@ -18,3 +18,5 @@ export type IconsNames =
   | 'square'
   | 'trapeze'
   | 'triangle'
+
+export type ThemeContextType = [string, () => void]
