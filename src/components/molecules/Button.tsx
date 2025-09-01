@@ -13,7 +13,9 @@ const Button = ({ type, children }: Props) => {
   ) : type === 'text' ? (
     <button className="py-6 px-3 text-white text-center text-xs bg-indigo-950">{children}</button>
   ) : (
-    <button>{children}</button>
+    <button className="w-full flex flex-col items-center gap-1.5 py-4 text-indigo-200 text-xs font-medium">
+      {children}
+    </button>
   )
 }
 

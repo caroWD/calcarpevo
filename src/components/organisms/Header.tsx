@@ -4,7 +4,7 @@ import Button from '../molecules/Button'
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center border rounded-full border-indigo-900 p-3 bg-linear-120 from-[#272263] to-indigo-950">
+    <header className="flex justify-between items-center border rounded-full border-indigo-900 p-3 bg-linear-120 from-[#272263] to-indigo-950 shadow-md">
       <Button type="icon">
         <Icon nameIcon="more vert" size={5} />
       </Button>
