@@ -1,9 +1,12 @@
+import Main from '@/components/organisms/Main'
 import FiguresTypeLayout from '@/layouts/FiguresTypeLayout'
 
 const Home = () => {
   return (
     <FiguresTypeLayout>
-      <main>Hola</main>
+      <Main>
+        <p>Hola Mundo</p>
+      </Main>
     </FiguresTypeLayout>
   )
 }
