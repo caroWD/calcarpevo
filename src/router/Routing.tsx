@@ -1,4 +1,6 @@
+import FlatFigures from '@/pages/FlatFigures'
 import Home from '@/pages/Home'
+import SolidFigures from '@/pages/SolidFigures'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 const Routing = () => {
@@ -6,6 +8,12 @@ const Routing = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="figuras-planas">
+          <Route index element={<FlatFigures />} />
+        </Route>
+        <Route path="figuras-solidas">
+          <Route index element={<SolidFigures />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

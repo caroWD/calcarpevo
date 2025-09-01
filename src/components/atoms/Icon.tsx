@@ -38,17 +38,19 @@ const Icon = ({ nameIcon, size }: Props) => {
                                 ? icons.parallelogram
                                 : nameIcon === 'polygon'
                                   ? icons.polygon
-                                  : nameIcon === 'rectangle'
-                                    ? icons.rectangle
-                                    : nameIcon === 'solid figure'
-                                      ? icons.solidFigure
-                                      : nameIcon === 'sphere'
-                                        ? icons.sphere
-                                        : nameIcon === 'square'
-                                          ? icons.square
-                                          : nameIcon === 'trapeze'
-                                            ? icons.trapeze
-                                            : icons.triangle
+                                  : nameIcon === 'pyramid'
+                                    ? icons.pyramid
+                                    : nameIcon === 'rectangle'
+                                      ? icons.rectangle
+                                      : nameIcon === 'solid figure'
+                                        ? icons.solidFigure
+                                        : nameIcon === 'sphere'
+                                          ? icons.sphere
+                                          : nameIcon === 'square'
+                                            ? icons.square
+                                            : nameIcon === 'trapeze'
+                                              ? icons.trapeze
+                                              : icons.triangle
       }
       alt={`$(name) icon`}
       className={iconSize}

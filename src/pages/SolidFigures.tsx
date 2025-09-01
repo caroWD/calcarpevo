@@ -1,14 +1,14 @@
 import FigureOption from '@/components/molecules/FigureOption'
 import Main from '@/components/organisms/Main'
 import Layout from '@/layouts/Layout'
-import { flatFigureOptions } from '@/utils/assetsUtil'
+import { solidFigureOptions } from '@/utils/assetsUtil'
 
-const FlatFigures = () => {
+const SolidFigures = () => {
   return (
     <Layout>
       <Main>
-        <section className="grid grid-cols-2 grid-rows-4 gap-4">
-          {flatFigureOptions.map((option) => (
+        <section className="grid grid-cols-2 grid-rows-3 gap-4">
+          {solidFigureOptions.map((option) => (
             <FigureOption
               key={option.id}
               label={option.name}
@@ -22,4 +22,4 @@ const FlatFigures = () => {
   )
 }
 
-export default FlatFigures
+export default SolidFigures

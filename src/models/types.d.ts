@@ -12,6 +12,7 @@ export type IconsNames =
   | 'more vert'
   | 'parallelogram'
   | 'polygon'
+  | 'pyramid'
   | 'rectangle'
   | 'solid figure'
   | 'sphere'

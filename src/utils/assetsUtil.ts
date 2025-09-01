@@ -57,3 +57,11 @@ export const flatFigureOptions: FigureOptions[] = [
   { id: 7, name: 'Polígono', link: 'poligono', icon: 'polygon' },
   { id: 8, name: 'Círculo', link: 'circulo', icon: 'circle' },
 ]
+
+export const solidFigureOptions: FigureOptions[] = [
+  { id: 1, name: 'Pirámide', link: 'piramide', icon: 'pyramid' },
+  { id: 2, name: 'Cubo', link: 'cubo', icon: 'cube' },
+  { id: 3, name: 'Esfera', link: 'esfera', icon: 'sphere' },
+  { id: 4, name: 'Cilindro', link: 'cilindro', icon: 'cylinder' },
+  { id: 5, name: 'Cono', link: 'cono', icon: 'cone' },
+]
