@@ -3,7 +3,7 @@ import Main from '@/components/organisms/Main'
 import Layout from '@/layouts/Layout'
 import { flatFigureOptions } from '@/utils/assetsUtil'
 
-const FlatFigures = () => {
+export const FlatFigures = () => {
   return (
     <Layout>
       <Main>
@@ -21,5 +21,3 @@ const FlatFigures = () => {
     </Layout>
   )
 }
-
-export default FlatFigures

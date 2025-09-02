@@ -3,7 +3,7 @@ import Main from '@/components/organisms/Main'
 import Layout from '@/layouts/Layout'
 import { solidFigureOptions } from '@/utils/assetsUtil'
 
-const SolidFigures = () => {
+export const SolidFigures = () => {
   return (
     <Layout>
       <Main>
@@ -21,5 +21,3 @@ const SolidFigures = () => {
     </Layout>
   )
 }
-
-export default SolidFigures

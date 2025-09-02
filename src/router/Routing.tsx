@@ -1,6 +1,4 @@
-import FlatFigures from '@/pages/FlatFigures'
-import Home from '@/pages/Home'
-import SolidFigures from '@/pages/SolidFigures'
+import { FlatFigures, Home, SolidFigures } from '@/pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 const Routing = () => {

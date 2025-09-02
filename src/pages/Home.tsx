@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import { ThemeContext } from '@/context/ThemeContextProvider'
 import type { ThemeContextType } from '@/models/types'
 
-const Home = () => {
+export const Home = () => {
   const [theme] = useContext(ThemeContext) as ThemeContextType
 
   return (
@@ -34,5 +34,3 @@ const Home = () => {
     </Layout>
   )
 }
-
-export default Home
