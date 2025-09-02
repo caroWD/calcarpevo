@@ -21,7 +21,7 @@ export const MainNav = () => {
         </li>
         <li>
           <Button type="mix" onClick={() => navigate('/figuras-solidas')}>
-            <Icon nameIcon={theme === 'dark' ? 'flat figure' : 'solid figure light'} size={6} />
+            <Icon nameIcon={theme === 'dark' ? 'solid figure' : 'solid figure light'} size={6} />
             Figuras Sólidas
           </Button>
         </li>

@@ -31,7 +31,7 @@ export const NavRoute = () => {
               ? 'flat figure'
               : breadcrums[1] === 'figuras planas' && theme === 'light'
                 ? 'flat figure light'
-                : breadcrums[1] === 'figuras sólidas' && theme === 'dark'
+                : breadcrums[1] === 'figuras solidas' && theme === 'dark'
                   ? 'solid figure'
                   : 'solid figure light'
           }
