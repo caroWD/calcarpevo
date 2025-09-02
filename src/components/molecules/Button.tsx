@@ -15,7 +15,10 @@ const Button = ({ type, children, onClick }: Props) => {
       {children}
     </button>
   ) : type === 'text' ? (
-    <button className="py-6 px-3 text-white text-center text-xs bg-indigo-950" onClick={onClick}>
+    <button
+      className="rounded-full px-6 py-3 text-slate-950 dark:text-white text-center text-xs leading-none bg-indigo-300 dark:bg-indigo-950"
+      onClick={onClick}
+    >
       {children}
     </button>
   ) : (
