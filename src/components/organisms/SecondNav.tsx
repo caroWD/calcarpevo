@@ -1,9 +1,8 @@
 import { useNavigate } from 'react-router'
-import Icon from '../atoms/Icon'
-import Button from '../molecules/Button'
-import NavRoute from '../molecules/NavRoute'
+import { Icon } from '../atoms/index'
+import { Button, NavRoute } from '../molecules/index'
 
-const SecondNav = () => {
+export const SecondNav = () => {
   const navigate = useNavigate()
 
   return (
@@ -15,5 +14,3 @@ const SecondNav = () => {
     </nav>
   )
 }
-
-export default SecondNav

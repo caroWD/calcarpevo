@@ -1,0 +1,6 @@
+export { FigureForm } from './FigureForm'
+export { FigureInfo } from './FigureInfo'
+export { Header } from './Header'
+export { Main } from './Main'
+export { MainNav } from './MainNav'
+export { SecondNav } from './SecondNav'

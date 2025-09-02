@@ -4,7 +4,7 @@ type Props = {
   mode: 'light' | 'dark'
 }
 
-const Logo = ({ mode }: Props) => {
+export const Logo = ({ mode }: Props) => {
   return (
     <img
       src={mode === 'light' ? logos.logoLight : logos.logoDark}
@@ -13,5 +13,3 @@ const Logo = ({ mode }: Props) => {
     />
   )
 }
-
-export default Logo

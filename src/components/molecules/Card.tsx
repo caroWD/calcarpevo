@@ -5,7 +5,7 @@ type CardProps = {
   children: JSX.Element
 }
 
-const Card = ({ title, children }: CardProps) => {
+export const Card = ({ title, children }: CardProps) => {
   return (
     <article className="border border-indigo-300 dark:border-indigo-950 rounded-2xl">
       <div className="border-b border-indigo-300 dark:border-b-indigo-950 px-4 py-2">
@@ -15,5 +15,3 @@ const Card = ({ title, children }: CardProps) => {
     </article>
   )
 }
-
-export default Card

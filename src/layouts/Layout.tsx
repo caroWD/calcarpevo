@@ -1,6 +1,4 @@
-import Header from '@/components/organisms/Header'
-import MainNav from '@/components/organisms/MainNav'
-import SecondNav from '@/components/organisms/SecondNav'
+import { Header, MainNav, SecondNav } from '@/components/organisms/index'
 import type { JSX } from 'react'
 import { useLocation } from 'react-router'
 

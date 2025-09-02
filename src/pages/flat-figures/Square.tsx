@@ -1,11 +1,8 @@
-import FigureInfo from '@/components/organisms/FigureInfo'
-import Main from '@/components/organisms/Main'
+import { FigureInfo, Main, FigureForm } from '@/components/organisms/index'
 import Layout from '@/layouts/Layout'
 import diagramSquare from '@/assets/diagram-square-geometric-figure.svg'
 import { useState } from 'react'
-import FigureForm from '@/components/organisms/FigureForm'
-import NumberField from '@/components/molecules/NumberField'
-import Button from '@/components/molecules/Button'
+import { NumberField, Button } from '@/components/molecules/index'
 
 export const Square = () => {
   const [step, setStep] = useState(0)

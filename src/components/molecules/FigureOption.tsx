@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router'
-import Icon from '../atoms/Icon'
+import { Icon } from '../atoms/index'
 import type { IconsNames } from '@/models/types'
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
   icon: IconsNames
 }
 
-const FigureOption = ({ label, link, icon }: Props) => {
+export const FigureOption = ({ label, link, icon }: Props) => {
   const navLinkStyles: string =
     icon === 'cone'
       ? 'flex flex-col justify-center items-center gap-1.5 border-2 border-indigo-300 dark:border-indigo-950 rounded-2xl last:col-span-2'
@@ -20,5 +20,3 @@ const FigureOption = ({ label, link, icon }: Props) => {
     </NavLink>
   )
 }
-
-export default FigureOption

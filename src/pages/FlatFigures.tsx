@@ -1,5 +1,5 @@
-import FigureOption from '@/components/molecules/FigureOption'
-import Main from '@/components/organisms/Main'
+import { FigureOption } from '@/components/molecules/index'
+import { Main } from '@/components/organisms/index'
 import Layout from '@/layouts/Layout'
 import { flatFigureOptions } from '@/utils/assetsUtil'
 

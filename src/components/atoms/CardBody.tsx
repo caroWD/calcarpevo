@@ -6,7 +6,7 @@ type Props = {
   areaFormula?: string
 }
 
-const CardBody = ({ copy, figure, figureText, perimeterFormula, areaFormula }: Props) => {
+export const CardBody = ({ copy, figure, figureText, perimeterFormula, areaFormula }: Props) => {
   return (
     <>
       {figure ? (
@@ -23,5 +23,3 @@ const CardBody = ({ copy, figure, figureText, perimeterFormula, areaFormula }: P
     </>
   )
 }
-
-export default CardBody

@@ -1,11 +1,11 @@
 import type { JSX } from 'react'
-import Card from '../molecules/Card'
+import { Card } from '../molecules/index'
 
 type Props = {
   children: JSX.Element[]
 }
 
-const FigureForm = ({ children }: Props) => {
+export const FigureForm = ({ children }: Props) => {
   const inputs = children.filter((child) => child.key !== children.length.toString())
   return (
     <section className="flex flex-col gap-4">
@@ -16,5 +16,3 @@ const FigureForm = ({ children }: Props) => {
     </section>
   )
 }
-
-export default FigureForm

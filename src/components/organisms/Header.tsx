@@ -1,11 +1,10 @@
 import { useContext } from 'react'
-import Icon from '../atoms/Icon'
-import Logo from '../atoms/Logo'
-import Button from '../molecules/Button'
+import { Icon, Logo } from '../atoms/index'
+import { Button } from '../molecules/index'
 import { ThemeContext } from '@/context/ThemeContextProvider'
 import type { ThemeContextType } from '@/models/types'
 
-const Header = () => {
+export const Header = () => {
   const [theme, handleTheme] = useContext(ThemeContext) as ThemeContextType
 
   return (
@@ -25,5 +24,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header

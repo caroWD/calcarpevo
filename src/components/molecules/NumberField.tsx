@@ -8,7 +8,15 @@ type Props = {
   maxValue?: number
 }
 
-const NumberField = ({ label, value, name, placeholder, onChange, minValue, maxValue }: Props) => {
+export const NumberField = ({
+  label,
+  value,
+  name,
+  placeholder,
+  onChange,
+  minValue,
+  maxValue,
+}: Props) => {
   return (
     <div className="flex flex-col gap-2">
       <label htmlFor={name} className="text-xs">
@@ -28,5 +36,3 @@ const NumberField = ({ label, value, name, placeholder, onChange, minValue, maxV
     </div>
   )
 }
-
-export default NumberField

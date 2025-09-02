@@ -1,11 +1,11 @@
-import Button from '../molecules/Button'
-import Icon from '../atoms/Icon'
+import { Button } from '../molecules/index'
+import { Icon } from '../atoms/index'
 import { useNavigate } from 'react-router'
 import { useContext } from 'react'
 import { ThemeContext } from '@/context/ThemeContextProvider'
 import type { ThemeContextType } from '@/models/types'
 
-const MainNav = () => {
+export const MainNav = () => {
   const navigate = useNavigate()
 
   const [theme] = useContext(ThemeContext) as ThemeContextType
@@ -29,5 +29,3 @@ const MainNav = () => {
     </nav>
   )
 }
-
-export default MainNav

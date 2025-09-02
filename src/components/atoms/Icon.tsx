@@ -6,7 +6,7 @@ type Props = {
   size: 5 | 6
 }
 
-const Icon = ({ nameIcon, size }: Props) => {
+export const Icon = ({ nameIcon, size }: Props) => {
   const iconSize = size === 5 ? 'size-5' : 'size-6'
 
   return (
@@ -61,5 +61,3 @@ const Icon = ({ nameIcon, size }: Props) => {
     />
   )
 }
-
-export default Icon

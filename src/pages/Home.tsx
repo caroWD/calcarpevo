@@ -1,4 +1,4 @@
-import Main from '@/components/organisms/Main'
+import { Main } from '@/components/organisms/index'
 import Layout from '@/layouts/Layout'
 import illustrationDark from '@/assets/two-young-people-studying-math-dark.svg'
 import illustration from '@/assets/two-young-people-studying-math.svg'

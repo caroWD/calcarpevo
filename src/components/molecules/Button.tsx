@@ -6,7 +6,7 @@ type Props = {
   onClick: () => void
 }
 
-const Button = ({ type, children, onClick }: Props) => {
+export const Button = ({ type, children, onClick }: Props) => {
   return type === 'icon' ? (
     <button
       className="size-[1.875rem] flex justify-center items-center rounded-full bg-indigo-300 dark:bg-indigo-200"
@@ -30,5 +30,3 @@ const Button = ({ type, children, onClick }: Props) => {
     </button>
   )
 }
-
-export default Button

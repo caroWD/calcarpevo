@@ -1,8 +1,7 @@
-import CardBody from '../atoms/CardBody'
-import Button from '../molecules/Button'
-import Card from '../molecules/Card'
+import { CardBody } from '../atoms/index'
+import { Button, Card } from '../molecules/index'
 
-type FigureType =
+export type FigureType =
   | 'Cuadrado'
   | 'Rectángulo'
   | 'Triángulo'
@@ -21,7 +20,7 @@ type Props = {
   onClick: () => void
 }
 
-const FigureInfo = ({
+export const FigureInfo = ({
   figureType,
   figureImage,
   alternativeText,
@@ -43,5 +42,3 @@ const FigureInfo = ({
     </section>
   )
 }
-
-export default FigureInfo

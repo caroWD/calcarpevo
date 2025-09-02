@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router'
-import Icon from '../atoms/Icon'
+import { Icon } from '../atoms/index'
 import { createBreadcrums } from '@/utils/utils'
 import { useContext } from 'react'
 import { ThemeContext } from '@/context/ThemeContextProvider'
 import type { ThemeContextType } from '@/models/types'
 
-const NavRoute = () => {
+export const NavRoute = () => {
   const { pathname } = useLocation()
 
   const breadcrums = createBreadcrums(pathname)
@@ -41,5 +41,3 @@ const NavRoute = () => {
     </div>
   )
 }
-
-export default NavRoute
