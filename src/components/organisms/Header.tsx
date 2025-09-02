@@ -9,7 +9,7 @@ const Header = () => {
   const [theme, handleTheme] = useContext(ThemeContext) as ThemeContextType
 
   return (
-    <header className="flex justify-between items-center border rounded-full border-indigo-900 p-3 bg-linear-120 from-[#272263] to-indigo-950 shadow-md">
+    <header className="flex justify-between items-center border rounded-full border-indigo-300 dark:border-indigo-900 p-3 bg-linear-120 from-indigo-100 dark:from-[#272263] to-indigo-200 dark:to-indigo-950 shadow-md">
       <Button
         type="icon"
         onClick={() => {
@@ -18,7 +18,7 @@ const Header = () => {
       >
         <Icon nameIcon="more vert" size={5} />
       </Button>
-      <Logo mode="dark" />
+      <Logo mode={theme === 'dark' ? 'dark' : 'light'} />
       <Button type="icon" onClick={handleTheme}>
         <Icon nameIcon={theme === 'dark' ? 'light mode' : 'dark mode'} size={5} />
       </Button>

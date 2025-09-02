@@ -9,7 +9,7 @@ type Props = {
 const Button = ({ type, children, onClick }: Props) => {
   return type === 'icon' ? (
     <button
-      className="size-[1.875rem] flex justify-center items-center rounded-full bg-indigo-200"
+      className="size-[1.875rem] flex justify-center items-center rounded-full bg-indigo-300 dark:bg-indigo-200"
       onClick={onClick}
     >
       {children}
@@ -20,7 +20,7 @@ const Button = ({ type, children, onClick }: Props) => {
     </button>
   ) : (
     <button
-      className="w-full flex flex-col items-center gap-1.5 py-4 text-indigo-200 text-xs font-medium"
+      className="w-full flex flex-col items-center gap-1.5 py-4 text-indigo-500 dark:text-indigo-200 text-xs font-medium"
       onClick={onClick}
     >
       {children}

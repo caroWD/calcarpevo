@@ -7,6 +7,7 @@ import cylinder from '@/assets/cylinder-icon.svg'
 import darkMode from '@/assets/dark-mode-icon.svg'
 import diamond from '@/assets/diamond-icon.svg'
 import flatFifure from '@/assets/flat-figure-icon.svg'
+import flatFigureLight from '@/assets/flat-figure-icon-light.svg'
 import lightMode from '@/assets/light-mode-icon.svg'
 import moreVert from '@/assets/more-vert-icon.svg'
 import parallelogram from '@/assets/parallelogram-icon.svg'
@@ -14,6 +15,7 @@ import polygon from '@/assets/polygon-icon.svg'
 import pyramid from '@/assets/pyramid-icon.svg'
 import rectangle from '@/assets/rectangle-icon.svg'
 import solidFigure from '@/assets/solid-figure-icon.svg'
+import solidFigureLight from '@/assets/solid-figure-icon-light.svg'
 import sphere from '@/assets/sphere-icon.svg'
 import square from '@/assets/square-icon.svg'
 import trapeze from '@/assets/trapeze-icon.svg'
@@ -32,6 +34,7 @@ export const icons = {
   darkMode,
   diamond,
   flatFifure,
+  flatFigureLight,
   lightMode,
   moreVert,
   parallelogram,
@@ -39,6 +42,7 @@ export const icons = {
   pyramid,
   rectangle,
   solidFigure,
+  solidFigureLight,
   sphere,
   square,
   trapeze,

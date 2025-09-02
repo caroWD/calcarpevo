@@ -30,27 +30,31 @@ const Icon = ({ nameIcon, size }: Props) => {
                         ? icons.diamond
                         : nameIcon === 'flat figure'
                           ? icons.flatFifure
-                          : nameIcon === 'light mode'
-                            ? icons.lightMode
-                            : nameIcon === 'more vert'
-                              ? icons.moreVert
-                              : nameIcon === 'parallelogram'
-                                ? icons.parallelogram
-                                : nameIcon === 'polygon'
-                                  ? icons.polygon
-                                  : nameIcon === 'pyramid'
-                                    ? icons.pyramid
-                                    : nameIcon === 'rectangle'
-                                      ? icons.rectangle
-                                      : nameIcon === 'solid figure'
-                                        ? icons.solidFigure
-                                        : nameIcon === 'sphere'
-                                          ? icons.sphere
-                                          : nameIcon === 'square'
-                                            ? icons.square
-                                            : nameIcon === 'trapeze'
-                                              ? icons.trapeze
-                                              : icons.triangle
+                          : nameIcon === 'flat figure light'
+                            ? icons.flatFigureLight
+                            : nameIcon === 'light mode'
+                              ? icons.lightMode
+                              : nameIcon === 'more vert'
+                                ? icons.moreVert
+                                : nameIcon === 'parallelogram'
+                                  ? icons.parallelogram
+                                  : nameIcon === 'polygon'
+                                    ? icons.polygon
+                                    : nameIcon === 'pyramid'
+                                      ? icons.pyramid
+                                      : nameIcon === 'rectangle'
+                                        ? icons.rectangle
+                                        : nameIcon === 'solid figure'
+                                          ? icons.solidFigure
+                                          : nameIcon === 'solid figure light'
+                                            ? icons.solidFigureLight
+                                            : nameIcon === 'sphere'
+                                              ? icons.sphere
+                                              : nameIcon === 'square'
+                                                ? icons.square
+                                                : nameIcon === 'trapeze'
+                                                  ? icons.trapeze
+                                                  : icons.triangle
       }
       alt={`$(name) icon`}
       className={iconSize}
