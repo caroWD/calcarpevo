@@ -30,3 +30,5 @@ export type FigureOptions = {
   link: string
   icon: IconsNames
 }
+
+export type NameInputs = 'type' | 'sides' | 'sideA' | 'sideB' | 'sideC' | 'diagonal' | 'angle'
