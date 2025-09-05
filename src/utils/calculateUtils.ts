@@ -44,8 +44,18 @@ const triangleCalculate = (sideA: number, sideB: number, base: number, result: T
   return { ...result, perimeter, area: Number(((base * height) / 2).toFixed(2)) }
 }
 
+const diamondCalculate = (sides: number, horizontaDiagonal: number, result: TResultContext) => {
+  const verticalDiagonal = Number(Math.sqrt(sides ** 2 - (horizontaDiagonal / 2) ** 2).toFixed(2))
+
+  return {
+    ...result,
+    perimeter: 4 * sides,
+    area: Number(((horizontaDiagonal * (2 * verticalDiagonal)) / 2).toFixed(2)),
+  }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
-  const { type, sides = 0, sideA = 0, sideB = 0, sideC = 0 } = data
+  const { type, sides = 0, sideA = 0, sideB = 0, sideC = 0, diagonal = 0 } = data
 
   switch (type) {
     case 'square':
@@ -56,6 +66,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'triangle':
       return triangleCalculate(sideA, sideB, sideC, result)
+
+    case 'diamond':
+      return diamondCalculate(sides, diagonal, result)
 
     default:
       break
