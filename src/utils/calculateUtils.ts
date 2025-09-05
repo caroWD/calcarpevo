@@ -54,8 +54,21 @@ const diamondCalculate = (sides: number, horizontaDiagonal: number, result: TRes
   }
 }
 
+const parallelogramCalculate = (
+  sideA: number,
+  sideB: number,
+  angle: number,
+  result: TResultContext,
+) => {
+  return {
+    ...result,
+    perimeter: 2 * sideA + 2 * sideB,
+    area: Number((Math.sin(angle * (Math.PI / 180)) * sideB).toFixed(2)),
+  }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
-  const { type, sides = 0, sideA = 0, sideB = 0, sideC = 0, diagonal = 0 } = data
+  const { type, sides = 0, sideA = 0, sideB = 0, sideC = 0, diagonal = 0, angle = 0 } = data
 
   switch (type) {
     case 'square':
@@ -69,6 +82,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'diamond':
       return diamondCalculate(sides, diagonal, result)
+
+    case 'parallelogram':
+      return parallelogramCalculate(sideA, sideB, angle, result)
 
     default:
       break
