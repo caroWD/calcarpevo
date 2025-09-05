@@ -1,14 +1,14 @@
 import { createContext, useState, type JSX } from 'react'
 
-export type ResultContext = {
+export type TResultContext = {
   perimeter: number
   area: number
   volume: number
 }
 
 export interface IResultContext {
-  result: ResultContext
-  handleResult: (calculate: ResultContext) => void
+  result: TResultContext
+  handleResult: (calculate: TResultContext) => void
 }
 
 export const ResultContext = createContext<IResultContext | null>(null)
@@ -18,10 +18,10 @@ type Props = {
 }
 
 export const ResultContextProvider = ({ children }: Props) => {
-  const initialResult: ResultContext = { perimeter: 0, area: 0, volume: 0 }
-  const [result, setResult] = useState<ResultContext>(initialResult)
+  const initialResult: TResultContext = { perimeter: 0, area: 0, volume: 0 }
+  const [result, setResult] = useState<TResultContext>(initialResult)
 
-  const handleResult = (calculate: ResultContext) => {
+  const handleResult = (calculate: TResultContext) => {
     setResult({ ...calculate })
   }
   return (

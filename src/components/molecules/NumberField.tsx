@@ -1,4 +1,4 @@
-import { FormContext, type IFormContext } from '@/context/FormContextProvider'
+import { FormContext, type IFormContext } from '@/context/index'
 import type { NameInputs } from '@/models/types'
 import { useContext } from 'react'
 

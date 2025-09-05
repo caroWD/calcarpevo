@@ -1,6 +1,6 @@
 import { useContext, type JSX } from 'react'
 import { Card } from '../molecules/index'
-import { FormContext, type IFormContext } from '@/context/FormContextProvider'
+import { FormContext, type IFormContext } from '@/context/index'
 import type { IconsNames } from '@/models/types'
 
 type Props = {

@@ -1,4 +1,4 @@
-import ThemeContextProvider from './context/ThemeContextProvider'
+import { ThemeContextProvider } from './context/index'
 import Routing from './router/Routing'
 
 function App() {

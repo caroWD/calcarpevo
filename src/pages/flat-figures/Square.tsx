@@ -3,8 +3,7 @@ import Layout from '@/layouts/Layout'
 import diagramSquare from '@/assets/diagram-square-geometric-figure.svg'
 import { useState } from 'react'
 import { NumberField, Button } from '@/components/molecules/index'
-import { FormContextProvider } from '@/context/FormContextProvider'
-import { ResultContextProvider } from '@/context/ResultContextProvider'
+import { FormContextProvider, ResultContextProvider } from '@/context/index'
 
 export const Square = () => {
   const [step, setStep] = useState(0)
@@ -36,7 +35,7 @@ export const Square = () => {
                 <NumberField key={1} label="Defina 'a'" name="sides" placeholder="ej. 55" />
                 <div key={2} className="flex gap-4 *:flex-1">
                   <Button type="text" onClick={prevStep}>
-                    Atras
+                    Atrás
                   </Button>
                   <Button type="submit">Calcular</Button>
                 </div>
@@ -45,7 +44,7 @@ export const Square = () => {
           ) : (
             <Result>
               <Button type="text" onClick={prevStep}>
-                Realizar otro calculo
+                Realizar otro cálculo
               </Button>
             </Result>
           )}

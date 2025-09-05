@@ -2,7 +2,7 @@ import { Button } from '../molecules/index'
 import { Icon } from '../atoms/index'
 import { useNavigate } from 'react-router'
 import { useContext } from 'react'
-import { ThemeContext } from '@/context/ThemeContextProvider'
+import { ThemeContext } from '@/context/index'
 import type { ThemeContextType } from '@/models/types'
 
 export const MainNav = () => {

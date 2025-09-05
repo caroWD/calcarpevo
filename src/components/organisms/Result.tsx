@@ -1,4 +1,4 @@
-import { ResultContext, type IResultContext } from '@/context/ResultContextProvider'
+import { ResultContext, type IResultContext } from '@/context/index'
 import { useContext, type JSX } from 'react'
 
 type Props = {

@@ -6,7 +6,7 @@ type Props = {
   children: JSX.Element
 }
 
-const ThemeContextProvider = ({ children }: Props) => {
+export const ThemeContextProvider = ({ children }: Props) => {
   const [theme, setTheme] = useState(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
     return 'light'
@@ -26,5 +26,3 @@ const ThemeContextProvider = ({ children }: Props) => {
 
   return <ThemeContext.Provider value={[theme, handleTheme]}>{children}</ThemeContext.Provider>
 }
-
-export default ThemeContextProvider

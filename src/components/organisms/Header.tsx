@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { Icon, Logo } from '../atoms/index'
 import { Button } from '../molecules/index'
-import { ThemeContext } from '@/context/ThemeContextProvider'
+import { ThemeContext } from '@/context/index'
 import type { ThemeContextType } from '@/models/types'
 
 export const Header = () => {

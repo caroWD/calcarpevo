@@ -38,13 +38,13 @@ const FormSchema = zod.object({
   angle: zod.coerce.number<number>().gte(1).lte(89).positive(emptyError).optional(),
 })
 
-export type FormContext = zod.infer<typeof FormSchema>
+export type TFormContext = zod.infer<typeof FormSchema>
 
 export interface IFormContext {
-  register: UseFormRegister<FormContext>
-  handleSubmit: UseFormHandleSubmit<FormContext>
-  errors: FieldErrors<FormContext>
-  onSubmit: (data: FormContext) => void
+  register: UseFormRegister<TFormContext>
+  handleSubmit: UseFormHandleSubmit<TFormContext>
+  errors: FieldErrors<TFormContext>
+  onSubmit: (data: TFormContext) => void
 }
 
 export const FormContext = createContext<IFormContext | null>(null)
@@ -63,7 +63,7 @@ export const FormContextProvider = ({ children, nextStep }: Props) => {
 
   const { result, handleResult } = useContext(ResultContext) as IResultContext
 
-  const onSubmit = (data: FormContext) => {
+  const onSubmit = (data: TFormContext) => {
     handleResult(calculate(data, result))
     nextStep()
   }
