@@ -31,12 +31,15 @@ export const Square = () => {
               onClick={nextStep}
             />
           ) : step === 1 ? (
-            <FormContextProvider>
+            <FormContextProvider nextStep={nextStep}>
               <FigureForm type="square">
                 <NumberField key={1} label="Defina 'a'" name="sides" placeholder="ej. 55" />
-                <Button key={2} type="submit" onClick={nextStep}>
-                  Calcular
-                </Button>
+                <div key={2} className="flex gap-4 *:flex-1">
+                  <Button type="text" onClick={prevStep}>
+                    Atras
+                  </Button>
+                  <Button type="submit">Calcular</Button>
+                </div>
               </FigureForm>
             </FormContextProvider>
           ) : (

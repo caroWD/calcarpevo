@@ -1,9 +1,9 @@
-import type { JSX } from 'react'
+import { type JSX } from 'react'
 
 type Props = {
   type: 'icon' | 'text' | 'mix' | 'submit'
   children: JSX.Element | string | [JSX.Element, string]
-  onClick: () => void
+  onClick?: () => void
 }
 
 export const Button = ({ type, children, onClick }: Props) => {
@@ -31,9 +31,6 @@ export const Button = ({ type, children, onClick }: Props) => {
   ) : (
     <button
       className="rounded-full px-6 py-3 text-slate-950 dark:text-white text-center text-xs leading-none bg-indigo-300 dark:bg-indigo-950"
-      onClick={() => {
-        setTimeout(onClick, 1)
-      }}
       type="submit"
       form="figureForm"
     >

@@ -51,9 +51,10 @@ export const FormContext = createContext<IFormContext | null>(null)
 
 type Props = {
   children: JSX.Element
+  nextStep: () => void
 }
 
-export const FormContextProvider = ({ children }: Props) => {
+export const FormContextProvider = ({ children, nextStep }: Props) => {
   const {
     register,
     handleSubmit,
@@ -64,6 +65,7 @@ export const FormContextProvider = ({ children }: Props) => {
 
   const onSubmit = (data: FormContext) => {
     handleResult(calculate(data, result))
+    nextStep()
   }
 
   return (
