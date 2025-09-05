@@ -1,1 +1,2 @@
-export { Square } from '@/pages/flat-figures/Square'
+export { Square } from './Square'
+export { Rectangle } from './Rectangle'
