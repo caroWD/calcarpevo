@@ -23,7 +23,9 @@ export const NumberField = ({ label, name, placeholder }: Props) => {
         placeholder={placeholder}
         className="rounded-sm border border-slate-300 dark:border-slate-800 p-3 bg-slate-200 dark:bg-slate-900 text-base text-slate-800 dark:text-white leading-4 placeholder:text-slate-400 placeholder:leading-4"
       />
-      {errors[name] && <p className="text-xs font-light text-red-400">{errors[name].message}</p>}
+      {errors[name] && (
+        <p className="text-[0.625rem] font-light text-red-400">{errors[name].message}</p>
+      )}
     </div>
   )
 }

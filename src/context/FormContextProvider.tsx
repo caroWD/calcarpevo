@@ -10,7 +10,7 @@ import * as zod from 'zod'
 import { ResultContext, type IResultContext } from './ResultContextProvider'
 import { calculate } from '@/utils/calculateUtils'
 
-const emptyError = 'Error: está vacio, es cero (0) o es negativo.'
+const emptyError = 'Campo no definido o negativo.'
 
 const typeEnum = [
   'circle',
