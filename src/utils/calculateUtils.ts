@@ -121,6 +121,10 @@ const cylinderCalculate = (radio: number, height: number, result: TResultContext
   return { ...result, volume: Number((Math.PI * radio ** 2 * height).toFixed(2)) }
 }
 
+const coneCalculate = (radio: number, height: number, result: TResultContext) => {
+  return { ...result, volume: Number(((Math.PI * radio ** 2 * height) / 3).toFixed(2)) }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -177,8 +181,10 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
     case 'cylinder':
       return cylinderCalculate(radio, height, result)
 
+    case 'cone':
+      return coneCalculate(radio, height, result)
+
     default:
-      break
+      return result
   }
-  return result
 }
