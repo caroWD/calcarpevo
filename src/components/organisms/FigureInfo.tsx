@@ -12,6 +12,7 @@ export type FigureType =
   | 'Círculo'
   | 'Pirámide'
   | 'Cubo'
+  | 'Paralelepípedo'
 
 type Props = {
   figureType: FigureType

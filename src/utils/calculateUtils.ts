@@ -104,6 +104,15 @@ const cubeCalculate = (sides: number, result: TResultContext) => {
   return { ...result, volume: Number((sides ** 3).toFixed(2)) }
 }
 
+const parallelepipedCalculate = (
+  sideA: number,
+  sideB: number,
+  sideC: number,
+  result: TResultContext,
+) => {
+  return { ...result, volume: Number((sideA * sideB * sideC).toFixed(2)) }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -150,6 +159,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'cube':
       return cubeCalculate(sides, result)
+
+    case 'parallelepiped':
+      return parallelepipedCalculate(sideA, sideB, sideC, result)
 
     default:
       break

@@ -27,6 +27,7 @@ const typeEnum = [
   'trapeze',
   'triangle',
   'pyramid',
+  'parallelepiped',
 ]
 
 const FormSchema = zod.object({
