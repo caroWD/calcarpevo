@@ -11,6 +11,7 @@ export type IconsNames =
   | 'flat figure light'
   | 'light mode'
   | 'more vert'
+  | 'parallelepiped'
   | 'parallelogram'
   | 'polygon'
   | 'pyramid'

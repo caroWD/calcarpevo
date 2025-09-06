@@ -10,6 +10,7 @@ import flatFifure from '@/assets/flat-figure-icon.svg'
 import flatFigureLight from '@/assets/flat-figure-icon-light.svg'
 import lightMode from '@/assets/light-mode-icon.svg'
 import moreVert from '@/assets/more-vert-icon.svg'
+import parallelepiped from '@/assets/parallelepiped-icon.svg'
 import parallelogram from '@/assets/parallelogram-icon.svg'
 import polygon from '@/assets/polygon-icon.svg'
 import pyramid from '@/assets/pyramid-icon.svg'
@@ -37,6 +38,7 @@ export const icons = {
   flatFigureLight,
   lightMode,
   moreVert,
+  parallelepiped,
   parallelogram,
   polygon,
   pyramid,
@@ -65,7 +67,8 @@ export const flatFigureOptions: FigureOptions[] = [
 export const solidFigureOptions: FigureOptions[] = [
   { id: 1, name: 'Pirámide', link: 'piramide', icon: 'pyramid' },
   { id: 2, name: 'Cubo', link: 'cubo', icon: 'cube' },
-  { id: 3, name: 'Esfera', link: 'esfera', icon: 'sphere' },
-  { id: 4, name: 'Cilindro', link: 'cilindro', icon: 'cylinder' },
-  { id: 5, name: 'Cono', link: 'cono', icon: 'cone' },
+  { id: 3, name: 'Paralelepípedo', link: 'paralelepipedo', icon: 'parallelepiped' },
+  { id: 4, name: 'Esfera', link: 'esfera', icon: 'sphere' },
+  { id: 5, name: 'Cilindro', link: 'cilindro', icon: 'cylinder' },
+  { id: 6, name: 'Cono', link: 'cono', icon: 'cone' },
 ]
