@@ -100,6 +100,10 @@ const pyramidCalculate = (base: number, height: number, result: TResultContext) 
   return { ...result, volume: Number(((1 / 3) * base * height).toFixed(2)) }
 }
 
+const cubeCalculate = (sides: number, result: TResultContext) => {
+  return { ...result, volume: Number((sides ** 3).toFixed(2)) }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -143,6 +147,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'pyramid':
       return pyramidCalculate(base, height, result)
+
+    case 'cube':
+      return cubeCalculate(sides, result)
 
     default:
       break

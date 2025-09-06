@@ -9,7 +9,7 @@ import {
   Polygon,
   Circle,
 } from '@/pages/flat-figures'
-import { Pyramid } from '@/pages/solid-figures'
+import { Cube, Pyramid } from '@/pages/solid-figures'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 const Routing = () => {
@@ -31,6 +31,7 @@ const Routing = () => {
         <Route path="figuras-solidas">
           <Route index element={<SolidFigures />} />
           <Route path="piramide" element={<Pyramid />} />
+          <Route path="cubo" element={<Cube />} />
         </Route>
       </Routes>
     </BrowserRouter>
