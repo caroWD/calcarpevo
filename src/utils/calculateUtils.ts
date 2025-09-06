@@ -96,6 +96,10 @@ const circleCalcule = (radio: number, result: TResultContext) => {
   }
 }
 
+const pyramidCalculate = (base: number, height: number, result: TResultContext) => {
+  return { ...result, volume: Number(((1 / 3) * base * height).toFixed(2)) }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -109,6 +113,7 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
     apothem = 0,
     diagonal = 0,
     angle = 0,
+    base = 0,
   } = data
 
   switch (type) {
@@ -135,6 +140,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'circle':
       return circleCalcule(radio, result)
+
+    case 'pyramid':
+      return pyramidCalculate(base, height, result)
 
     default:
       break

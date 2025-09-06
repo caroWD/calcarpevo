@@ -22,18 +22,23 @@ export const Pyramid = () => {
         <ResultContextProvider>
           {step === 0 ? (
             <FigureInfo
-              figureType="Círculo"
+              figureType="Pirámide"
               figureImage={diagram}
               alternativeText="Diagrama de figura geometrica piramidal"
-              perimeterFormula="P => 2PIr"
-              areaFormula="A => 2PIr^2"
+              volumeFormula="V => (1 / 3) * b * h"
               onClick={nextStep}
             />
           ) : step === 1 ? (
             <FormContextProvider nextStep={nextStep}>
-              <FigureForm type="circle">
-                <NumberField key={1} label="Defina el radio" name="radio" placeholder="ej. 35" />
-                <div key={2} className="flex gap-4 *:flex-1">
+              <FigureForm type="pyramid" figure="pirámide">
+                <NumberField key={1} label="Defina 'b' (base)" name="base" placeholder="ej. 35" />
+                <NumberField
+                  key={2}
+                  label="Defina 'h' (altura)"
+                  name="height"
+                  placeholder="ej. 35"
+                />
+                <div key={3} className="flex gap-4 *:flex-1">
                   <Button type="text" onClick={prevStep}>
                     Atrás
                   </Button>

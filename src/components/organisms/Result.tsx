@@ -29,7 +29,7 @@ export const Result = ({ children }: Props) => {
         ) : (
           <hgroup>
             <h3>Volumen</h3>
-            <p>{volume}</p>
+            <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem]">{volume}</p>
           </hgroup>
         )}
       </div>

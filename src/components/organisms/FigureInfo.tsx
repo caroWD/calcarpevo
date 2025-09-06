@@ -10,13 +10,15 @@ export type FigureType =
   | 'Trapecio'
   | 'Polígono'
   | 'Círculo'
+  | 'Pirámide'
 
 type Props = {
   figureType: FigureType
   figureImage: string
   alternativeText: string
-  perimeterFormula: string
-  areaFormula: string
+  perimeterFormula?: string
+  areaFormula?: string
+  volumeFormula?: string
   onClick: () => void
 }
 
@@ -26,6 +28,7 @@ export const FigureInfo = ({
   alternativeText,
   perimeterFormula,
   areaFormula,
+  volumeFormula,
   onClick,
 }: Props) => {
   return (
@@ -33,8 +36,12 @@ export const FigureInfo = ({
       <Card title="Figura geométrica">
         <CardBody copy={figureType} figure={figureImage} figureText={alternativeText} />
       </Card>
-      <Card title="Formulas de perímetro y área">
-        <CardBody perimeterFormula={perimeterFormula} areaFormula={areaFormula} />
+      <Card title={!volumeFormula ? 'Formulas de perímetro y área' : 'Formulas de volumen'}>
+        {!volumeFormula ? (
+          <CardBody perimeterFormula={perimeterFormula} areaFormula={areaFormula} />
+        ) : (
+          <CardBody volumeFormula={volumeFormula} />
+        )}
       </Card>
       <Button type="text" onClick={onClick}>
         Siguiente

@@ -26,6 +26,7 @@ const typeEnum = [
   'square',
   'trapeze',
   'triangle',
+  'pyramid',
 ]
 
 const FormSchema = zod.object({
@@ -39,6 +40,7 @@ const FormSchema = zod.object({
   apothem: zod.coerce.number<number>().positive(emptyError).optional(),
   diagonal: zod.coerce.number<number>().positive(emptyError).optional(),
   radio: zod.coerce.number<number>().positive(emptyError).optional(),
+  base: zod.coerce.number<number>().positive(emptyError).optional(),
   angle: zod.coerce
     .number<number>()
     .gte(1, 'Debe ser mayor o igual a uno (1).')
