@@ -9,7 +9,7 @@ import {
   Polygon,
   Circle,
 } from '@/pages/flat-figures'
-import { Cube, Parallelepiped, Pyramid } from '@/pages/solid-figures'
+import { Cube, Parallelepiped, Pyramid, Sphere } from '@/pages/solid-figures'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 const Routing = () => {
@@ -33,6 +33,7 @@ const Routing = () => {
           <Route path="piramide" element={<Pyramid />} />
           <Route path="cubo" element={<Cube />} />
           <Route path="paralelepipedo" element={<Parallelepiped />} />
+          <Route path="esfera" element={<Sphere />} />
         </Route>
       </Routes>
     </BrowserRouter>

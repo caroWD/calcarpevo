@@ -113,6 +113,10 @@ const parallelepipedCalculate = (
   return { ...result, volume: Number((sideA * sideB * sideC).toFixed(2)) }
 }
 
+const sphereCalculate = (radio: number, result: TResultContext) => {
+  return { ...result, volume: Number(((4 / 3) * Math.PI * radio ** 3).toFixed(2)) }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -162,6 +166,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'parallelepiped':
       return parallelepipedCalculate(sideA, sideB, sideC, result)
+
+    case 'sphere':
+      return sphereCalculate(radio, result)
 
     default:
       break
