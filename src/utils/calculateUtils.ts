@@ -67,8 +67,33 @@ const parallelogramCalculate = (
   }
 }
 
+const trapezeeCalculate = (
+  sideA: number,
+  sideB: number,
+  sideC: number,
+  sideD: number,
+  height: number,
+  result: TResultContext,
+) => {
+  return {
+    ...result,
+    perimeter: sideA + sideB + sideC + sideD,
+    area: Number(((sideA + sideB) / 2) * height),
+  }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
-  const { type, sides = 0, sideA = 0, sideB = 0, sideC = 0, diagonal = 0, angle = 0 } = data
+  const {
+    type,
+    sides = 0,
+    sideA = 0,
+    sideB = 0,
+    sideC = 0,
+    sideD = 0,
+    height = 0,
+    diagonal = 0,
+    angle = 0,
+  } = data
 
   switch (type) {
     case 'square':
@@ -85,6 +110,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'parallelogram':
       return parallelogramCalculate(sideA, sideB, angle, result)
+
+    case 'trapeze':
+      return trapezeeCalculate(sideA, sideB, sideC, sideD, height, result)
 
     default:
       break

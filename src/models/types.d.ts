@@ -31,4 +31,13 @@ export type FigureOptions = {
   icon: IconsNames
 }
 
-export type NameInputs = 'type' | 'sides' | 'sideA' | 'sideB' | 'sideC' | 'diagonal' | 'angle'
+export type NameInputs =
+  | 'type'
+  | 'sides'
+  | 'sideA'
+  | 'sideB'
+  | 'sideC'
+  | 'sideD'
+  | 'height'
+  | 'diagonal'
+  | 'angle'

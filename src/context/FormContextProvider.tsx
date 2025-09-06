@@ -34,6 +34,8 @@ const FormSchema = zod.object({
   sideA: zod.coerce.number<number>().positive(emptyError).optional(),
   sideB: zod.coerce.number<number>().positive(emptyError).optional(),
   sideC: zod.coerce.number<number>().positive(emptyError).optional(),
+  sideD: zod.coerce.number<number>().positive(emptyError).optional(),
+  height: zod.coerce.number<number>().positive(emptyError).optional(),
   diagonal: zod.coerce.number<number>().positive(emptyError).optional(),
   angle: zod.coerce
     .number<number>()
@@ -69,6 +71,7 @@ export const FormContextProvider = ({ children, nextStep }: Props) => {
   const { result, handleResult } = useContext(ResultContext) as IResultContext
 
   const onSubmit = (data: TFormContext) => {
+    console.log(data)
     handleResult(calculate(data, result))
     nextStep()
   }
