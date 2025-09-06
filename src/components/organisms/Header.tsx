@@ -4,17 +4,16 @@ import { Button } from '../molecules/index'
 import { ThemeContext } from '@/context/index'
 import type { ThemeContextType } from '@/models/types'
 
-export const Header = () => {
+type Props = {
+  onClick: () => void
+}
+
+export const Header = ({ onClick }: Props) => {
   const [theme, handleTheme] = useContext(ThemeContext) as ThemeContextType
 
   return (
     <header className="flex justify-between items-center border rounded-full border-indigo-300 dark:border-indigo-900 p-3 bg-linear-120 from-indigo-100 dark:from-[#272263] to-indigo-200 dark:to-indigo-950 shadow-md">
-      <Button
-        type="icon"
-        onClick={() => {
-          console.log('more vert icon')
-        }}
-      >
+      <Button type="icon" onClick={onClick}>
         <Icon nameIcon="more vert" size={5} />
       </Button>
       <Logo mode={theme === 'dark' ? 'dark' : 'light'} />
