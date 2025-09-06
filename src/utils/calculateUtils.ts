@@ -117,6 +117,10 @@ const sphereCalculate = (radio: number, result: TResultContext) => {
   return { ...result, volume: Number(((4 / 3) * Math.PI * radio ** 3).toFixed(2)) }
 }
 
+const cylinderCalculate = (radio: number, height: number, result: TResultContext) => {
+  return { ...result, volume: Number((Math.PI * radio ** 2 * height).toFixed(2)) }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -169,6 +173,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'sphere':
       return sphereCalculate(radio, result)
+
+    case 'cylinder':
+      return cylinderCalculate(radio, height, result)
 
     default:
       break

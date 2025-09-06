@@ -14,6 +14,7 @@ export type FigureType =
   | 'Cubo'
   | 'Paralelepípedo'
   | 'Esfera'
+  | 'Cilindro'
 
 type Props = {
   figureType: FigureType
