@@ -38,6 +38,7 @@ const FormSchema = zod.object({
   height: zod.coerce.number<number>().positive(emptyError).optional(),
   apothem: zod.coerce.number<number>().positive(emptyError).optional(),
   diagonal: zod.coerce.number<number>().positive(emptyError).optional(),
+  radio: zod.coerce.number<number>().positive(emptyError).optional(),
   angle: zod.coerce
     .number<number>()
     .gte(1, 'Debe ser mayor o igual a uno (1).')

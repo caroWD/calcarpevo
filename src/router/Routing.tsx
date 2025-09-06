@@ -7,6 +7,7 @@ import {
   Parallelogram,
   Trapeze,
   Polygon,
+  Circle,
 } from '@/pages/flat-figures'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
@@ -24,6 +25,7 @@ const Routing = () => {
           <Route path="paralelogramo" element={<Parallelogram />} />
           <Route path="trapecio" element={<Trapeze />} />
           <Route path="poligono" element={<Polygon />} />
+          <Route path="circulo" element={<Circle />} />
         </Route>
         <Route path="figuras-solidas">
           <Route index element={<SolidFigures />} />

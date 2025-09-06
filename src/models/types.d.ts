@@ -42,3 +42,4 @@ export type NameInputs =
   | 'diagonal'
   | 'angle'
   | 'apothem'
+  | 'radio'

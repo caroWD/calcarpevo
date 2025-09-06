@@ -1,6 +1,5 @@
 import type { TFormContext } from '@/context/FormContextProvider'
 import type { TResultContext } from '@/context/ResultContextProvider'
-import { area } from 'motion/react-client'
 
 const validateRightTriangle = (sides: number[]) => {
   const hipotenuse = Math.max(...sides)
@@ -68,7 +67,7 @@ const parallelogramCalculate = (
   }
 }
 
-const trapezeeCalculate = (
+const trapezeCalculate = (
   sideA: number,
   sideB: number,
   sideC: number,
@@ -89,6 +88,14 @@ const polygonCalculate = (sides: number, apothem: number, result: TResultContext
   return { ...result, perimeter, area: (perimeter * apothem) / 2 }
 }
 
+const circleCalcule = (radio: number, result: TResultContext) => {
+  return {
+    ...result,
+    perimeter: Number((2 * Math.PI * radio).toFixed(2)),
+    area: Number((2 * Math.PI * radio ** 2).toFixed(2)),
+  }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -98,6 +105,7 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
     sideC = 0,
     sideD = 0,
     height = 0,
+    radio = 0,
     apothem = 0,
     diagonal = 0,
     angle = 0,
@@ -120,10 +128,13 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
       return parallelogramCalculate(sideA, sideB, angle, result)
 
     case 'trapeze':
-      return trapezeeCalculate(sideA, sideB, sideC, sideD, height, result)
+      return trapezeCalculate(sideA, sideB, sideC, sideD, height, result)
 
     case 'polygon':
       return polygonCalculate(sides, apothem, result)
+
+    case 'circle':
+      return circleCalcule(radio, result)
 
     default:
       break
