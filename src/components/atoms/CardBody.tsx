@@ -19,18 +19,18 @@ export const CardBody = ({
     <>
       {figure ? (
         <div className="flex items-center gap-4 p-4 text-slate-800 dark:text-white">
-          <img src={figure} alt={figureText} />
-          <p className="text-sm leading-normal">{copy}</p>
+          <img src={figure} alt={figureText} className="w-auto 2xs:w-20" />
+          <p className="text-sm leading-normal 2xs:text-base">{copy}</p>
         </div>
       ) : (
-        <div className="flex flex-col gap-1.5 p-4 text-slate-800 dark:text-white">
+        <div className="flex flex-col gap-1.5 p-4 text-slate-800 dark:text-white *:text-sm *:leading-normal 2xs:*:text-base">
           {!volumeFormula ? (
             <>
-              <p className="text-sm leading-normal">{perimeterFormula}</p>
-              <p className="text-sm leading-normal">{areaFormula}</p>
+              <p>{perimeterFormula}</p>
+              <p>{areaFormula}</p>
             </>
           ) : (
-            <p className="text-sm leading-normal">{volumeFormula}</p>
+            <p>{volumeFormula}</p>
           )}
         </div>
       )}

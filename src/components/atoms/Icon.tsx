@@ -7,7 +7,7 @@ type Props = {
 }
 
 export const Icon = ({ nameIcon, size }: Props) => {
-  const iconSize = size === 5 ? 'size-5' : 'size-6'
+  const iconSize = size === 5 ? 'size-5' : 'size-6 2xs:size-8'
 
   return (
     <img

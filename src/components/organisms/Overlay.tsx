@@ -19,7 +19,7 @@ export const Overlay = ({ ref, onClick }: Props) => {
             <Icon nameIcon="close" size={5} />
           </Button>
         </div>
-        <div className="flex-1 flex flex-col justify-center items-center gap-6 text-center">
+        <div className="flex-1 flex flex-col justify-center items-center gap-6 text-center 2xs:px-4">
           <LogoCaro />
           <div className="flex flex-col gap-3">
             <p className="text-white">

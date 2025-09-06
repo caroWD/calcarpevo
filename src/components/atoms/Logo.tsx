@@ -9,7 +9,7 @@ export const Logo = ({ mode }: Props) => {
     <img
       src={mode === 'light' ? logos.logoLight : logos.logoDark}
       alt="Logo de CalcArPeVo"
-      className="h-6 w-auto"
+      className="h-6 w-auto 2xs:h-8"
     />
   )
 }

@@ -14,7 +14,7 @@ export const NavRoute = () => {
 
   return (
     <div className="grow flex justify-end items-center gap-1">
-      <ul className="flex gap-0.5 text-indigo-700 dark:text-indigo-500 text-[0.625rem] capitalize *:after:content-['/'] *:after:ml-0.5">
+      <ul className="flex gap-0.5 text-indigo-700 dark:text-indigo-500 text-[0.625rem] 2xs:text-xs capitalize *:after:content-['/'] *:after:ml-0.5">
         {breadcrums.map((crum) => (
           <li
             key={crum}

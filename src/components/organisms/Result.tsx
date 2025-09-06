@@ -12,24 +12,28 @@ export const Result = ({ children }: Props) => {
 
   return (
     <section className="flex flex-col gap-4">
-      <div className="flex flex-col flex-1 *:flex-1 *:flex *:flex-col *:justify-center *:items-center *:gap-4 **:font-semibold **:text-2xl **:leading-none">
+      <div className="flex flex-col flex-1 *:flex-1 *:flex *:flex-col *:justify-center *:items-center *:gap-4 2xs:*:gap-6 **:font-semibold **:text-2xl **:leading-none 2xs:**:text-4xl">
         {!volume ? (
           <>
             <hgroup>
               <h3>Perímetro</h3>
-              <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem]">
+              <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem] 2xs:last:text-7xl">
                 {perimeter}
               </p>
             </hgroup>
             <hgroup>
               <h3>Área</h3>
-              <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem]">{area}</p>
+              <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem] 2xs:last:text-7xl">
+                {area}
+              </p>
             </hgroup>
           </>
         ) : (
           <hgroup>
             <h3>Volumen</h3>
-            <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem]">{volume}</p>
+            <p className="last:text-indigo-700 last:font-normal last:text-[3.25rem] 2xs:last:text-7xl">
+              {volume}
+            </p>
           </hgroup>
         )}
       </div>

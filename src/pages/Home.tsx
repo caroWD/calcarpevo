@@ -12,21 +12,22 @@ export const Home = () => {
   return (
     <Layout>
       <Main>
-        <section className="grow flex flex-col items-center justify-center gap-5">
-          <hgroup className="flex flex-col gap-2 text-center">
-            <h2 className="font-bold text-4xl leading-none after:block after:w-32 after:h-0.5 after:bg-slate-800 after:rounded-full after:mt-2 after:mx-auto">
+        <section className="grow flex flex-col items-center justify-center gap-6">
+          <hgroup className="flex flex-col gap-2 2xs:gap-3 text-center">
+            <h2 className="font-bold text-4xl 2xs:text-5xl leading-none after:block after:w-32 after:h-0.5 after:bg-slate-800 after:rounded-full after:mt-2 after:mx-auto">
               Bienvenido
             </h2>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              CalcArPeVo es una PWA para calcular el área y el perímetro de figuras planas y el
+            <p className="text-xs 2xs:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+              CalcArPeVo es una SPA para calcular el área y el perímetro de figuras planas y el
               volumen de figuras sólidas.
             </p>
           </hgroup>
           <img
             src={theme === 'dark' ? illustrationDark : illustration}
             alt="Dos jovenes estudiando matemáticas"
+            className="w-auto 2xs:w-3/4"
           />
-          <p className="text-center text-sm">
+          <p className="text-center text-sm 2xs:text-base">
             Selecciona una de las dos opciones del menú de navegación inferior.
           </p>
         </section>

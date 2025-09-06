@@ -13,7 +13,7 @@ export const NumberField = ({ label, name, placeholder }: Props) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={name} className="text-xs">
+      <label htmlFor={name} className="text-xs 2xs:text-sm">
         {label}
       </label>
       <input
