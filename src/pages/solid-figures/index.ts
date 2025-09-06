@@ -1,0 +1,1 @@
+export { Pyramid } from './Pyramid'

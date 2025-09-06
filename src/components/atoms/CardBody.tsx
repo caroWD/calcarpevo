@@ -4,9 +4,17 @@ type Props = {
   figureText?: string
   perimeterFormula?: string
   areaFormula?: string
+  volumeFormula?: string
 }
 
-export const CardBody = ({ copy, figure, figureText, perimeterFormula, areaFormula }: Props) => {
+export const CardBody = ({
+  copy,
+  figure,
+  figureText,
+  perimeterFormula,
+  areaFormula,
+  volumeFormula,
+}: Props) => {
   return (
     <>
       {figure ? (
@@ -16,8 +24,14 @@ export const CardBody = ({ copy, figure, figureText, perimeterFormula, areaFormu
         </div>
       ) : (
         <div className="flex flex-col gap-1.5 p-4 text-slate-800 dark:text-white">
-          <p className="text-sm leading-normal">{perimeterFormula}</p>
-          <p className="text-sm leading-normal">{areaFormula}</p>
+          {!volumeFormula ? (
+            <>
+              <p className="text-sm leading-normal">{perimeterFormula}</p>
+              <p className="text-sm leading-normal">{areaFormula}</p>
+            </>
+          ) : (
+            <p className="text-sm leading-normal">{volumeFormula}</p>
+          )}
         </div>
       )}
     </>
