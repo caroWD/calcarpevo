@@ -1,5 +1,6 @@
 import type { TFormContext } from '@/context/FormContextProvider'
 import type { TResultContext } from '@/context/ResultContextProvider'
+import { area } from 'motion/react-client'
 
 const validateRightTriangle = (sides: number[]) => {
   const hipotenuse = Math.max(...sides)
@@ -82,6 +83,12 @@ const trapezeeCalculate = (
   }
 }
 
+const polygonCalculate = (sides: number, apothem: number, result: TResultContext) => {
+  const perimeter = 6 * sides
+
+  return { ...result, perimeter, area: (perimeter * apothem) / 2 }
+}
+
 export const calculate = (data: TFormContext, result: TResultContext) => {
   const {
     type,
@@ -91,6 +98,7 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
     sideC = 0,
     sideD = 0,
     height = 0,
+    apothem = 0,
     diagonal = 0,
     angle = 0,
   } = data
@@ -113,6 +121,9 @@ export const calculate = (data: TFormContext, result: TResultContext) => {
 
     case 'trapeze':
       return trapezeeCalculate(sideA, sideB, sideC, sideD, height, result)
+
+    case 'polygon':
+      return polygonCalculate(sides, apothem, result)
 
     default:
       break

@@ -1,5 +1,13 @@
 import { FlatFigures, Home, SolidFigures } from '@/pages/index'
-import { Rectangle, Square, Triangle, Diamond, Parallelogram, Trapeze } from '@/pages/flat-figures'
+import {
+  Rectangle,
+  Square,
+  Triangle,
+  Diamond,
+  Parallelogram,
+  Trapeze,
+  Polygon,
+} from '@/pages/flat-figures'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 const Routing = () => {
@@ -15,6 +23,7 @@ const Routing = () => {
           <Route path="rombo" element={<Diamond />} />
           <Route path="paralelogramo" element={<Parallelogram />} />
           <Route path="trapecio" element={<Trapeze />} />
+          <Route path="poligono" element={<Polygon />} />
         </Route>
         <Route path="figuras-solidas">
           <Route index element={<SolidFigures />} />

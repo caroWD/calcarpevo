@@ -36,6 +36,7 @@ const FormSchema = zod.object({
   sideC: zod.coerce.number<number>().positive(emptyError).optional(),
   sideD: zod.coerce.number<number>().positive(emptyError).optional(),
   height: zod.coerce.number<number>().positive(emptyError).optional(),
+  apothem: zod.coerce.number<number>().positive(emptyError).optional(),
   diagonal: zod.coerce.number<number>().positive(emptyError).optional(),
   angle: zod.coerce
     .number<number>()

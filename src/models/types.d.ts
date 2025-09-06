@@ -41,3 +41,4 @@ export type NameInputs =
   | 'height'
   | 'diagonal'
   | 'angle'
+  | 'apothem'
